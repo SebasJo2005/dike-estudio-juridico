@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog | DIKÉ</title>
+    <!-- Fuentes elegantes -->
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+
+<header class="header">
+    <div class="logo-container">
+        <img src="../images/logo.png" alt="DIKÉ Logo">
+        <span>DIKÉ ADVISERS & LAWYERS</span>
+    </div>
+
+    <button class="menu-toggle" aria-label="Abrir menú">
+    <span></span>
+    <span></span>
+    <span></span>
+</button>
+    <nav class="nav">
+        <a href="../index.html#inicio">INICIO</a>
+        <a href="../index.html#areas">ÁREAS</a>
+        <a href="../index.html#nosotros">SOBRE NOSOTROS</a>
+        <a href="../index.html#contacto">CONTACTO</a>
+        <a href="../index.html#redes">REDES SOCIALES</a>
+        <a href="index.html">BLOG</a>
+    </nav>
+</header>
+
+<main class="section blog-list">
+    <br>
+    <h4>Blog Jurídico</h4>
+    <div class="blog-filters">
+    <button data-filter="all" class="active">Todos</button>
+    <button data-filter="civil">Derecho Civil</button>
+    <button data-filter="penal">Derecho Penal</button>
+    <button data-filter="corporativo">Derecho Corporativo</button>
+</div>
+
+
+    <article class="blog-card" data-category="civil">
+    <h2>¿Qué hacer ante una citación judicial?</h2>
+    <p class="blog-meta">Derecho Civil · 10 Febrero 2026</p>
+    <p>Guía básica sobre cómo actuar ante una citación judicial.</p>
+    <a href="articulo-1.html">Leer más →</a>
+</article>
+
+<article class="blog-card" data-category="penal">
+    <h2>Responsabilidad penal en empresas</h2>
+    <p class="blog-meta">Derecho Penal · 5 Febrero 2026</p>
+    <p>Aspectos clave que toda empresa debe conocer.</p>
+    <a href="blog/articulo-2.html">Leer más →</a>
+</article>
+
+<article class="blog-card" data-category="corporativo">
+    <h2>Responsabilidad corporativa</h2>
+    <p class="blog-meta">Derecho Penal · 5 Febrero 2026</p>
+    <p>Aspectos clave que toda empresa debe conocer.</p>
+    <a href="blog/articulo-2.html">Leer más →</a>
+</article>
+
+</main>
+
+<footer class="footer">
+    <div class="footer-content">
+
+        <!-- Logo -->
+        <div class="footer-logo">
+            <img src="images/logo.png" alt="DIKÉ Logo">
+        </div>
+
+        <!-- Información + links -->
+        <div class="footer-info">
+            <p>Estudio Jurídico · Ecuador</p>
+
+            <nav class="footer-links">
+                <a href="#inicio">Inicio</a>
+                <a href="#areas">Áreas</a>
+                <a href="blog.html">Blog</a>
+                <a href="#contacto">Contacto</a>
+            </nav>
+
+            <small>© 2026 DIKÉ Advisers & Lawyers</small>
+        </div>
+
+    </div>
+</footer>
+
+</body>
+
+<!--Abrir y cerrar menu hamburguesa-->
+<script>
+const toggle = document.querySelector(".menu-toggle");
+const nav = document.querySelector(".nav");
+
+toggle.addEventListener("click", () => {
+    toggle.classList.toggle("active");
+    nav.classList.toggle("show");
+});
+
+// cerrar al tocar un link
+document.querySelectorAll(".nav a").forEach(link => {
+    link.addEventListener("click", () => {
+        toggle.classList.remove("active");
+        nav.classList.remove("show");
+    });
+});
+</script>
+
+
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+    const buttons = document.querySelectorAll(".blog-filters button");
+    const articles = document.querySelectorAll(".blog-card");
+
+    buttons.forEach(button => {
+        button.addEventListener("click", () => {
+            const filter = button.getAttribute("data-filter");
+
+            // Estado activo
+            buttons.forEach(btn => btn.classList.remove("active"));
+            button.classList.add("active");
+
+            articles.forEach(article => {
+                const category = article.getAttribute("data-category");
+
+                if (filter === "all" || category === filter) {
+                    article.style.display = "block";
+                } else {
+                    article.style.display = "none";
+                }
+            });
+        });
+    });
+});
+</script>
+
+
+<script>
+    let lastScrollTop = 0;
+    const header = document.querySelector(".header");
+
+    window.addEventListener("scroll", () => {
+        let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+
+        if (scrollTop > lastScrollTop && scrollTop > 120) {
+            // Scroll hacia abajo → ocultar header
+            header.classList.add("hide");
+        } else {
+            // Scroll hacia arriba → mostrar header
+            header.classList.remove("hide");
+        }
+
+        lastScrollTop = scrollTop;
+    });
+</script>
+
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+    const blogSection = document.querySelector(".blog-list");
+
+    // Pequeño delay para sensación premium
+    setTimeout(() => {
+        blogSection.classList.add("show");
+    }, 150);
+});
+</script>
+
+</html>

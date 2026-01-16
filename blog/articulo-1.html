@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>¿Qué hacer ante una citación judicial?</title>
+    <!-- Fuentes elegantes -->
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+
+
+
+<body>
+
+<!-- ================= HEADER ================= -->
+<header class="header">
+    <div class="logo-container">
+        <img src="../images/logo.png" alt="DIKÉ Logo">
+        <span>DIKÉ ADVISERS & LAWYERS</span>
+    </div>
+
+    <button class="menu-toggle" aria-label="Abrir menú">
+    <span></span>
+    <span></span>
+    <span></span>
+</button>
+    <nav class="nav">
+        <a href="../index.html#inicio">INICIO</a>
+        <a href="../index.html#areas">ÁREAS</a>
+        <a href="../index.html#nosotros">SOBRE NOSOTROS</a>
+        <a href="../index.html#contacto">CONTACTO</a>
+        <a href="../index.html#redes">REDES SOCIALES</a>
+        <a href="index.html">BLOG</a>
+    </nav>
+</header>
+
+
+<main class="section blog-article">
+
+    <h1>¿Qué hacer ante una citación judicial?</h1>
+
+    <p class="blog-meta">Dr. Juan Carlos Córdova · Derecho Civil · Martes 10 de Febrero del 2026</p> 
+    <br>
+
+    <p>
+        Recibir una citación judicial suele generar preocupación e incertidumbre,
+        especialmente cuando no se tiene experiencia previa en procesos legales.
+        Sin embargo, es importante actuar con calma y conocer los pasos adecuados
+        para proteger tus derechos y cumplir con la ley.
+    </p>
+    <br>
+
+    <p>
+        A continuación, desde DIKÉ Advisers & Lawyers, te explicamos de manera clara
+        y sencilla qué hacer ante una citación judicial y cómo actuar correctamente
+        desde el primer momento.
+    </p>
+    <br><br>
+
+    <h3>1. No ignorar la citación</h3>
+    <p>
+        El primer y más importante paso es <strong>no ignorar la citación judicial</strong>.
+        Toda citación implica una obligación legal de comparecer o responder dentro
+        de un plazo determinado. Ignorarla puede generar consecuencias legales,
+        como sanciones, multas o incluso medidas más graves según el caso.
+    </p>
+    <br>
+
+    <p>
+        Revisa cuidadosamente el documento recibido, identifica la autoridad que
+        emite la citación, la fecha, la hora y el lugar de comparecencia, así como
+        el motivo del proceso.
+    </p>
+    <br><br>
+
+    <h3>2. Revisar el contenido de la citación</h3>
+    <p>
+        Es fundamental leer detenidamente el contenido de la citación judicial.
+        Allí se especifica si debes comparecer como demandado, testigo o parte
+        interesada, así como el tipo de proceso al que se refiere.
+    </p>
+    <br>
+
+    <p>
+        Comprender esta información te permitirá saber la relevancia del proceso
+        y preparar una respuesta adecuada conforme a la normativa vigente.
+    </p>
+    <br><br>
+
+    <h3>3. Buscar asesoría legal especializada</h3>
+    <p>
+        Contar con el acompañamiento de un abogado especializado es clave para
+        afrontar cualquier proceso judicial. Un profesional del derecho podrá
+        analizar tu situación, explicarte las implicaciones legales y definir
+        la mejor estrategia de defensa o actuación.
+    </p>
+    <br>
+
+    <p>
+        En muchos casos, una asesoría temprana puede evitar errores que perjudiquen
+        el desarrollo del proceso o generen consecuencias innecesarias.
+    </p>
+    <br><br>
+
+    <h3>4. Reunir la documentación necesaria</h3>
+    <p>
+        Dependiendo del tipo de citación, será necesario reunir documentos que
+        respalden tu posición, como contratos, comprobantes, comunicaciones
+        escritas u otros elementos probatorios.
+    </p>
+    <br>
+
+    <p>
+        Tener esta información organizada facilitará el trabajo del abogado
+        y fortalecerá tu posición dentro del proceso judicial.
+    </p>
+    <br><br>
+
+    <h3>5. Comparecer puntualmente</h3>
+    <p>
+        Finalmente, asegúrate de presentarte puntualmente en la fecha y lugar
+        indicados en la citación. La puntualidad demuestra respeto por el proceso
+        y evita posibles sanciones por inasistencia.
+    </p>
+    <br>
+
+    <p>
+        En caso de existir un impedimento válido, este debe ser comunicado
+        oportunamente y respaldado conforme a la ley.
+    </p>
+    <br>
+
+    <p>
+        En conclusión, una citación judicial no debe ser motivo de pánico,
+        pero sí requiere atención inmediata y asesoría profesional.
+        Actuar de forma responsable y con respaldo legal es la mejor manera
+        de proteger tus derechos.
+    </p>
+    <br><br>
+
+</main>
+
+
+<footer class="footer">
+    <div class="footer-content">
+
+        <!-- Logo -->
+        <div class="footer-logo">
+            <img src="../images/logo.png" alt="DIKÉ Logo">
+        </div>
+
+        <!-- Información + links -->
+        <div class="footer-info">
+            <p>Estudio Jurídico · Ecuador</p>
+
+            <nav class="footer-links">
+                <a href="#inicio">Inicio</a>
+                <a href="#areas">Áreas</a>
+                <a href="blog.html">Blog</a>
+                <a href="#contacto">Contacto</a>
+            </nav>
+
+            <small>© 2026 DIKÉ Advisers & Lawyers</small>
+        </div>
+
+    </div>
+</footer>
+
+</body>
+
+<!--Abrir y cerrar menu hamburguesa-->
+<script>
+const toggle = document.querySelector(".menu-toggle");
+const nav = document.querySelector(".nav");
+
+toggle.addEventListener("click", () => {
+    toggle.classList.toggle("active");
+    nav.classList.toggle("show");
+});
+
+// cerrar al tocar un link
+document.querySelectorAll(".nav a").forEach(link => {
+    link.addEventListener("click", () => {
+        toggle.classList.remove("active");
+        nav.classList.remove("show");
+    });
+});
+</script>
+
+<script>
+    let lastScrollTop = 0;
+    const header = document.querySelector(".header");
+
+    window.addEventListener("scroll", () => {
+        let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+
+        if (scrollTop > lastScrollTop && scrollTop > 120) {
+            // Scroll hacia abajo → ocultar header
+            header.classList.add("hide");
+        } else {
+            // Scroll hacia arriba → mostrar header
+            header.classList.remove("hide");
+        }
+
+        lastScrollTop = scrollTop;
+    });
+</script>
+
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+    const article = document.querySelector(".blog-article");
+
+    if (article) {
+        setTimeout(() => {
+            article.classList.add("show");
+        }, 120);
+    }
+});
+</script>
+
+</html>
